@@ -20,6 +20,8 @@ public class UserVo implements Serializable {
     private List<ChildVo> childVo;
     @ExcelCollection(name = "女儿")
     private List<ChildVo1> childVo1s;
+    @Excel(name = "头像", type = 2 ,width = 40 , height = 20,needMerge = true,imageType = 1,fixedIndex = 7)
+    private String companyLogo;
 
     public String getName() {
         return name;
@@ -55,6 +57,14 @@ public class UserVo implements Serializable {
 
     public List<ChildVo1> getChildVo1s() {
         return childVo1s;
+    }
+
+    public String getCompanyLogo() {
+        return companyLogo;
+    }
+
+    public void setCompanyLogo(String companyLogo) {
+        this.companyLogo = companyLogo;
     }
 
     public void setChildVo1s(List<ChildVo1> childVo1s) {
