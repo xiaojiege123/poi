@@ -19,6 +19,8 @@ public class UserVo1 implements Serializable {
     private String sonName;
     @Excel(name = "女儿",needMerge = true)
     private String dName;
+    @Excel(name = "头像", type = 2 ,width = 40 , height = 20,needMerge = true,imageType = 1)
+    private String img;
 
     public String getName() {
         return name;
@@ -58,5 +60,13 @@ public class UserVo1 implements Serializable {
 
     public void setdName(String dName) {
         this.dName = dName;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
